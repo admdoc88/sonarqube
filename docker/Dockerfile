@@ -56,7 +56,7 @@ RUN set -x \
 VOLUME "$SONARQUBE_HOME/data"
 
 WORKDIR $SONARQUBE_HOME
-COPY run.sh $SONARQUBE_HOME/bin/
+COPY docker/run.sh $SONARQUBE_HOME/bin/
 RUN dos2unix $SONARQUBE_HOME/bin/run.sh && chmod +x $SONARQUBE_HOME/bin/run.sh
 
 RUN chmod -R 777 $SONARQUBE_HOME
